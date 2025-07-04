@@ -1,2 +1,10 @@
+# Ignore API keys and environment files
+api_key.env
 .env
+*.env
+
+# Ignore node_modules folder
 node_modules/
+
+# Ignore output files, se quiser
+output.json
