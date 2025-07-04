@@ -17,3 +17,20 @@ Ferramenta interativa para triagem automática e aplicação de critérios em re
 ```bash
 git clone https://github.com/jailmajanuario/projeto-para-disciplina.git
 cd projeto-para-disciplina
+
+2. Instale as dependências:
+
+npm install
+
+3. Configure a chave da API Gemini:
+
+Abra o arquivo analisa.py
+
+Substitua "insira sua chave" pela sua chave real
+
+4. Inicie a aplicação:
+
+node app.js
+
+5. Acesse no navegador:
+http://localhost:3000
