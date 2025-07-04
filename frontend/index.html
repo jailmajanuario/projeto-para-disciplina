@@ -83,16 +83,11 @@
 
       document.body.classList.add('busca-realizada');
 
-      const API_BASE_URL = window.location.hostname === 'localhost'
-  ? 'http://localhost:3000'
-  : 'https://seu-app.onrender.com';
-
-fetch(`${API_BASE_URL}/api/articles/search?doi=${encodeURIComponent(doi)}`)
-  .then(res => {
-    if (!res.ok) throw new Error('Artigo não encontrado ou erro na API');
-    return res.json();
-  })
-
+      fetch(`http://localhost:3000/api/articles/search?doi=${encodeURIComponent(doi)}`)
+        .then(res => {
+          if (!res.ok) throw new Error('Artigo não encontrado ou erro na API');
+          return res.json();
+        })
         .then(data => {
           mostrarResultado(data);
           mostrarCitacoes(data.citations);
